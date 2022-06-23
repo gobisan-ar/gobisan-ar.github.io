@@ -228,7 +228,8 @@ hr{
   height: 120px;
   border-radius: 50%;
   justify-self: center;
-  margin-bottom: var(--mb-1)
+  margin-bottom: var(--mb-1);
+  border-collapse: separate; 
 }
 
 .home_title {
