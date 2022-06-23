@@ -80,7 +80,6 @@ img {
   outline: 3px solid var(--booster-color);
   padding: 3px;
   background-color: var(--container-color);
-  border-radius: 50%;
 }
 
 hr{
