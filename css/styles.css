@@ -207,7 +207,7 @@ hr{
 
 /* Active menu link */
 .active-link {
-  color: var(--title-color);
+  color: var(--booster-color);
 }
 
 /*========== HOME ==========*/
