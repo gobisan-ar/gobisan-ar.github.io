@@ -192,7 +192,7 @@ hr{
 }
 
 .nav_link:hover {
-  color: var(--title-color);
+  color: var(--booster-color);
 }
 
 .nav_icon {
