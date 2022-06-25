@@ -12,8 +12,8 @@
   --container-color-alt: #F0EFEF;
   --body-color: #FCFCFC;
   --sidenav-color: #222222;
-  --booster-color: #483486;   
-  /* booster-pallet:  #483486, #31156f, #22024B, #300366 */
+  --theme-color: #483486;   
+  /* theme-pallet:  #483486, #31156f, #22024B, #300366 */
 
   /*========== Font and typography ==========*/
   --body-font: 'Poppins', sans-serif;
@@ -77,14 +77,14 @@ a {
 img {
   max-width: 100%;
   height: auto;
-  outline: 3px solid var(--booster-color);
+  outline: 3px solid var(--theme-color);
   padding: 3px;
   background-color: var(--container-color);
 }
 
 hr{
   margin-bottom: var(--mb-3);
-  color: var(--booster-color);
+  color: var(--theme-color);
 }
 
 /*========== CSS CLASSES ==========*/
@@ -107,7 +107,7 @@ hr{
 }
 
 .resume_left .section_title{
-    color: var(--booster-color);
+    color: var(--theme-color);
 }
 
 /*========== LAYOUT ==========*/
@@ -191,7 +191,7 @@ hr{
 }
 
 .nav_link:hover {
-  color: var(--booster-color);
+  color: var(--theme-color);
 }
 
 .nav_icon {
@@ -206,7 +206,7 @@ hr{
 
 /* Active menu link */
 .active-link {
-  color: var(--booster-color);
+  color: var(--theme-color);
 }
 
 /*========== HOME ==========*/
@@ -236,7 +236,7 @@ hr{
 }
 
 .home_title .fname{
-  color: var(--booster-color);
+  color: var(--theme-color);
 }
 
 .home_profession {
@@ -289,7 +289,7 @@ hr{
 }
 
 .social_link:hover {
-  color: var(--booster-color);
+  color: var(--theme-color);
 }
 
 .social_icon {
@@ -320,7 +320,7 @@ hr{
   display: block;
   width: 16px;
   height: 16px;
-  background-color: var(--booster-color);
+  background-color: var(--theme-color);
   border-radius: 50%;
   margin-top: 0.25rem;
 }
@@ -472,7 +472,7 @@ hr{
 .certificate_link:hover,
 .repo_link:hover,
 .list_link:hover {
-  color: var(--booster-color);
+  color: var(--theme-color);
   cursor: pointer;
 }
 
@@ -541,7 +541,7 @@ hr{
   justify-content: center;
   align-items: center;
   padding: 0.3rem;
-  background-color: var(--booster-color);
+  background-color: var(--theme-color);
   border-radius: 0.4rem;
   z-index: var(--z-tooltip);
   transition: 0.4s;
@@ -567,7 +567,7 @@ hr{
   }
 
   .resume_left .section_title{
-    color: var(--booster-color);
+    color: var(--theme-color);
   }
 
 
@@ -594,7 +594,7 @@ hr{
 
   .home_img {
     outline: none;
-    border: 3px solid var(--booster-color);
+    border: 3px solid var(--theme-color);
   }
 }
 
@@ -689,10 +689,10 @@ hr{
   }
 
   .sidenav a:hover {
-    background-color: var(--booster-color);
+    background-color: var(--theme-color);
   }
 
   .sidenav-active {
-    background-color: var(--booster-color);
+    background-color: var(--theme-color);
   }
 }
