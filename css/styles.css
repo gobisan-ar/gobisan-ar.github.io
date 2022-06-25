@@ -226,10 +226,10 @@ hr{
 .home_img {
   width: 120px;
   height: 120px;
-  border-radius: 50% !important;
+  border-radius: 50%;
   justify-self: center;
   margin-bottom: var(--mb-1);
-  border-collapse: separate; 
+  perspective: 1px;
 }
 
 .home_title {
