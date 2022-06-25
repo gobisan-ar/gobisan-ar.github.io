@@ -229,7 +229,6 @@ hr{
   border-radius: 50%;
   justify-self: center;
   margin-bottom: var(--mb-1);
-  perspective: 1px;
 }
 
 .home_title {
@@ -591,6 +590,10 @@ hr{
   .project_categories {
     grid-template-columns: repeat(1, max-content);
     column-gap: 2rem;
+  }
+
+  .home_img {
+    border-radius: 0px;
   }
 }
 
