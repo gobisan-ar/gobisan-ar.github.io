@@ -593,7 +593,6 @@ hr{
   }
 
   .home_img {
-    border-radius: 50% !important;
     outline: none;
     border: 3px solid var(--booster-color);
   }
