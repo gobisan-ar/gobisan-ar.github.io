@@ -593,7 +593,7 @@ hr{
   }
 
   .home_img {
-    border-radius: 50% !important;
+    border-radius: 10% !important;
     perspective: 1px;
     border-collapse: separate;
     overflow: hidden;
