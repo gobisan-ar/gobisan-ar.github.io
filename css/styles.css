@@ -596,6 +596,7 @@ hr{
     border-radius: 50% !important;
     perspective: 1px;
     border-collapse: separate;
+    overflow: hidden;
   }
 }
 
