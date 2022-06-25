@@ -597,6 +597,7 @@ hr{
     perspective: 1px;
     border-collapse: separate;
     overflow: hidden;
+    width: auto;
   }
 }
 
