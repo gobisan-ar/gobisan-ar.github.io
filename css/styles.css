@@ -352,7 +352,8 @@ hr{
   color: var(--title-color);
 }
 
-.education_year {
+.education_year,
+.experience_year {
   font-size: var(--smaller-font-size);
 }
 
