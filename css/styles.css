@@ -408,6 +408,16 @@ hr{
   cursor: pointer;
 }
 
+.skills_subtitle {
+  align-items: center;
+  margin-bottom: 2%;
+}
+
+.skills_subheader{
+  display: flex;
+  align-items: center;
+}
+
 .skills_arrow,
 .project_arrow {
   font-size: var(--h1-font-size);
