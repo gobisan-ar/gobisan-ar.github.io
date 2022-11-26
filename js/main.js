@@ -126,9 +126,9 @@ function experience(join_date) {
     years = diff / 12
     months = diff % 12
 
-    return monthNames[join_date.getMonth()] + " " + join_date.getFullYear() + " - Present (" + year + "yrs" + months + "mos)";
+    return monthNames[join_date.getMonth() - 1] + " " + join_date.getFullYear() + " - Present (" + year + "yrs" + months + " mos)";
   }else{
-    return monthNames[join_date.getMonth()] + " " + join_date.getFullYear() + " - Present (" + diff + "mos)";
+    return monthNames[join_date.getMonth() - 1] + " " + join_date.getFullYear() + " - Present (" + diff + " mos)";
   }
 }
 
