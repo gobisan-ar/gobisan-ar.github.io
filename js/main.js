@@ -111,6 +111,23 @@ projectHeader.forEach((el) => {
   el.addEventListener('click', toggleProject)
 });
 
+
+/*==================== EXPERIENCE ====================*/
+function experience(join) {
+  var current_date = new Date();
+  var diff =(dt2.getTime() - dt1.getTime()) / 1000;
+
+  diff /= (60 * 60 * 24 * 7 * 4);
+
+  return Math.abs(Math.round(diff));
+}
+
+virtusa_join = new Date(2022, 10, 12)
+virtusa = experience(virtusa_join)
+var virtusa_experience = document.getElementById("virtusa_experience");
+
+virtusa_experience.innerHTML("Oct 2022 - Present (" + experience + " mos)")
+
 /*==================== SHOW SCROLL TOP ====================*/
 function scrollTop() {
   const scrollTop = document.getElementById('scroll-top');
