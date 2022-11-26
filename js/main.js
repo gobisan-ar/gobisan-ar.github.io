@@ -128,7 +128,7 @@ var virtusa_experience = document.getElementById("virtusa_experience");
 
 console.log("Oct 2022");
 
-virtusa_experience.innerHTML = "Oct 2022 - Present (".concat(virtusa_experience, " mons)");
+virtusa_experience.innerHTML = "Oct 2022 - Present (".concat(virtusa, " mons)");
 
 /*==================== SHOW SCROLL TOP ====================*/
 function scrollTop() {
