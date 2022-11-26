@@ -132,9 +132,9 @@ function experience(join_date) {
   }
 }
 
-virtusa_join = new Date(2022, 10, 12);
-virtusa = experience(virtusa_join);
-var virtusa_experience = document.getElementById("virtusa_experience");
+var virtusa_join = new Date(2022, 10, 12);
+var virtusa = experience(virtusa_join);
+const virtusa_experience = document.getElementById("virtusa_experience");
 
 virtusa_experience.innerHTML = virtusa;
 
