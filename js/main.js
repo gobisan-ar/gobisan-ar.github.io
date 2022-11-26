@@ -126,7 +126,7 @@ virtusa_join = new Date(2022, 10, 12)
 virtusa = experience(virtusa_join)
 var virtusa_experience = document.getElementById("virtusa_experience");
 
-virtusa_experience.innerHTML("Oct 2022 - Present (" + experience + " mos)")
+virtusa_experience.innerHTML("Oct 2022 - Present (" + experience + " mons)")
 
 /*==================== SHOW SCROLL TOP ====================*/
 function scrollTop() {
