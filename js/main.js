@@ -113,22 +113,30 @@ projectHeader.forEach((el) => {
 
 
 /*==================== EXPERIENCE ====================*/
+const monthNames = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
 function experience(join_date) {
   var current_date = new Date();
-  var diff =(current_date.getTime() - join_date.getTime()) / 1000;
+  var diff = (current_date.getTime() - join_date.getTime()) / 1000;
 
   diff /= (60 * 60 * 24 * 7 * 4);
+  diff = Math.abs(Math.round(diff))
 
-  return Math.abs(Math.round(diff));
+  if (this.diff >= 12){
+    years = diff / 12
+    months = diff % 12
+
+    return monthNames[d.getMonth()] + " " + join_date.getFullYear() + " - Present (" + year + "yrs" + months + "mos)";
+  }else{
+    return monthNames[d.getMonth()] + " " + join_date.getFullYear() + " - Present (" + diff + "mos)";
+  }
 }
 
 virtusa_join = new Date(2022, 10, 12);
 virtusa = experience(virtusa_join);
 var virtusa_experience = document.getElementById("virtusa_experience");
 
-console.log("Oct 2022");
-
-virtusa_experience.innerHTML = "Oct 2022 - Present (".concat(virtusa, " mons)");
+virtusa_experience.innerHTML = virtusa;
 
 /*==================== SHOW SCROLL TOP ====================*/
 function scrollTop() {
