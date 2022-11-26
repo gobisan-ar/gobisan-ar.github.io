@@ -113,9 +113,9 @@ projectHeader.forEach((el) => {
 
 
 /*==================== EXPERIENCE ====================*/
-function experience(join) {
+function experience(join_date) {
   var current_date = new Date();
-  var diff =(dt2.getTime() - dt1.getTime()) / 1000;
+  var diff =(current_date.getTime() - join_date.getTime()) / 1000;
 
   diff /= (60 * 60 * 24 * 7 * 4);
 
