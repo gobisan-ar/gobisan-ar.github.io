@@ -119,24 +119,38 @@ function experience(join_date) {
   var current_date = new Date();
   var diff = (current_date.getTime() - join_date.getTime()) / 1000;
 
+  var year_str = "yr"
+  var month_str = "mon"
+  var experience_str = monthNames[join_date.getMonth() - 1] + " " + join_date.getFullYear() + " - Present ("
+
   diff /= (60 * 60 * 24 * 7 * 4);
   diff = Math.abs(Math.round(diff))
 
   if (this.diff >= 12){
-    years = diff / 12
-    months = diff % 12
+    year_count = Math.floor(diff / 12)
+    month_count = diff % 12
 
-    return monthNames[join_date.getMonth() - 1] + " " + join_date.getFullYear() + " - Present (" + year + "yrs" + months + " mos)";
+    if (year_count > 1){
+      year_str = "yrs"
+    }
+
+    if (month_count > 1){
+      month_str = "mos"
+    }
+
+  if (year_count > 1){
+    return experience_str.concat(year_count, " ", year_str, " ", month_count, month_str, ")");
   }else{
-    return monthNames[join_date.getMonth() - 1] + " " + join_date.getFullYear() + " - Present (" + diff + " mos)";
+    return experience_str.concat(months, month_str, ")");
   }
 }
 
-var virtusa_join = new Date(2022, 10, 12);
-var virtusa = experience(virtusa_join);
-const virtusa_experience = document.getElementById("virtusa_experience");
+var company_join = new Date(2022, 10, 12);
+var current_experience = experience(company_join);
+const current_company = document.getElementById("current_company");
 
-virtusa_experience.innerHTML = virtusa;
+current_company.innerHTML = current_experience;
+
 
 /*==================== SHOW SCROLL TOP ====================*/
 function scrollTop() {
