@@ -129,7 +129,7 @@ function experience(join_date) {
   var year_count = 0;
   var month_count = 0;
 
-  if (this.diff >= 12){
+  if (diff >= 12){
     year_count = Math.floor(diff / 12)
     month_count = diff % 12
 
@@ -142,7 +142,7 @@ function experience(join_date) {
   if (year_count > 1){
     return experience_str.concat(year_count, " ", year_str, " ", month_count, month_str, ")");
   }else{
-    return experience_str.concat(month_count, month_str, ")");
+    return experience_str.concat(month_count, " ", month_str, ")");
   }
 }
 
