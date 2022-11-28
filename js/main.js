@@ -120,7 +120,7 @@ function experience(join_date) {
   var diff = (current_date.getTime() - join_date.getTime()) / 1000;
 
   var year_str = "yr"
-  var month_str = "mon"
+  var month_str = "mo"
   var experience_str = monthNames[join_date.getMonth() - 1] + " " + join_date.getFullYear() + " - Present ("
 
   diff /= (60 * 60 * 24 * 7 * 4);
