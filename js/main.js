@@ -126,6 +126,9 @@ function experience(join_date) {
   diff /= (60 * 60 * 24 * 7 * 4);
   diff = Math.abs(Math.round(diff));
 
+  var year_count = 0;
+  var month_count = 0;
+
   if (this.diff >= 12){
     year_count = Math.floor(diff / 12)
     month_count = diff % 12
