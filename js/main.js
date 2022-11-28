@@ -142,7 +142,7 @@ function experience(join_date) {
   if (year_count > 1){
     return experience_str.concat(year_count, " ", year_str, " ", month_count, month_str, ")");
   }else{
-    return experience_str.concat(months, month_str, ")");
+    return experience_str.concat(month_count, month_str, ")");
   }
 }
 
