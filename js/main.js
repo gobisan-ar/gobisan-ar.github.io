@@ -124,24 +124,22 @@ function experience(join_date) {
   var experience_str = monthNames[join_date.getMonth() - 1] + " " + join_date.getFullYear() + " - Present ("
 
   diff /= (60 * 60 * 24 * 7 * 4);
-  diff = Math.abs(Math.round(diff))
+  diff = Math.abs(Math.round(diff));
 
   if (this.diff >= 12){
     year_count = Math.floor(diff / 12)
     month_count = diff % 12
 
-    if (year_count > 1){
-      year_str = "yrs"
-    }
-
-    if (month_count > 1){
-      month_str = "mos"
-    }
+    if (year_count > 1) year_str = "yrs";
+    
+    if (month_count > 1) month_str = "mos";
+    
 
   if (year_count > 1){
     return experience_str.concat(year_count, " ", year_str, " ", month_count, month_str, ")");
   }else{
     return experience_str.concat(months, month_str, ")");
+  }
   }
 }
 
