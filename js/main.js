@@ -128,15 +128,14 @@ function experience(join_date) {
   diff = Math.abs(Math.round(diff));
 
   var year_count = 0;
-  var month_count = 0;
+  var month_count = diff % 12;
 
   if (diff >= 12){
     year_count = Math.floor(diff / 12)
-    month_count = diff % 12
-
     year_str = year_count > 1 ? "yrs" : "yr";
-    month_str = month_count > 1 ? "mos" : "mo";
   } 
+
+  month_str = month_count > 1 ? "mos" : "mo";
 
   return experience_str + (year_count > 1 ? year_count + " " + year_str + " " + month_count + " " + month_str : diff + " " + month_str) + ")";
 }
