@@ -121,7 +121,8 @@ function experience(join_date) {
 
   var year_str = "yr"
   var month_str = "mo"
-  var experience_str = monthNames[join_date.getMonth() - 1] + " " + join_date.getFullYear() + " - Present ("
+  var join_month = monthNames[join_date.getMonth() - 1];
+  var experience_str = join_month + " " + join_date.getFullYear() + " - Present ("
 
   diff /= (60 * 60 * 24 * 7 * 4);
   diff = Math.abs(Math.round(diff));
@@ -133,18 +134,13 @@ function experience(join_date) {
     year_count = Math.floor(diff / 12)
     month_count = diff % 12
 
-    if (year_count > 1) year_str = "yrs";
-    
-    if (month_count > 1) month_str = "mos";
-
+    year_str = year_count > 1 ? "yrs" : "yr";
+    month_str = month_count > 1 ? "mos" : "mo";
   } 
 
-  if (year_count > 1){
-    return experience_str.concat(year_count, " ", year_str, " ", month_count, month_str, ")");
-  }else{
-    return experience_str.concat(diff, " ", month_str, ")");
-  }
+  return experience_str + (year_count > 1 ? year_count + " " + year_str + " " + month_count + " " + month_str : diff + " " + month_str) + ")";
 }
+
 
 var company_join = new Date(2022, 10, 12);
 var current_experience = experience(company_join);
