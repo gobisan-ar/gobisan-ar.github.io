@@ -49,7 +49,6 @@ window.addEventListener('scroll', scrollActive)
 
 
 /*==================== SIDE NAVIGATION ACTIVE LINK ====================*/
-
 var sidenavContainer = document.getElementById("sidenavbar-nav");
 var sidenavlinks = sidenavContainer.getElementsByClassName("sidenav-link");
 
