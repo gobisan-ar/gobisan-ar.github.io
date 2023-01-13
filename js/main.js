@@ -124,7 +124,7 @@ function experience(join_date) {
   var experience_str = join_month + " " + join_date.getFullYear() + " - Present ("
 
   diff /= (60 * 60 * 24 * 7 * 4);
-  diff = Math.abs(Math.round(diff));
+  diff = Math.ceil(diff);
 
   var year_count = 0;
   var month_count = diff % 12;
