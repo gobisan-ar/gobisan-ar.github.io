@@ -368,9 +368,12 @@ hr{
 }
 
 .task_summary{
-  padding-bottom: .5rem;
   list-style-type: disc;
   padding-left: 1rem;
+}
+
+.task_summary li{
+  padding-bottom: .5rem;
 }
 
 /*========== LANGUAGES ==========*/
