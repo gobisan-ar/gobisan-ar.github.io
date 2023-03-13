@@ -357,11 +357,6 @@ hr{
   font-size: var(--smaller-font-size);
 }
 
-.experience_description {
-  text-align: justify;
-  text-justify: inter-word;
-}
-
 .task_summary{
   list-style-type: disc;
   padding-left: 1rem;
@@ -369,6 +364,8 @@ hr{
 
 .task_summary li{
   padding-bottom: .5rem;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 /*========== LANGUAGES ==========*/
