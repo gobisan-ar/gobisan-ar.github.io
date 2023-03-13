@@ -363,15 +363,14 @@ hr{
 }
 
 .job_description {
-  padding-top: .5rem;
-  margin-left: 1rem;
   text-align: justify;
   text-justify: inter-word;
 }
 
 .task_summary{
+  padding-bottom: .5rem;
   list-style-type: disc;
-  margin-left: 1rem;
+  padding-left: 2rem;
 }
 
 /*========== LANGUAGES ==========*/
