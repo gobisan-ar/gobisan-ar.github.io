@@ -364,7 +364,7 @@ hr{
 
 .job_description {
   padding-top: .5rem;
-  margin-left: .75rem;
+  margin-left: 1rem;
   text-align: justify;
   text-justify: inter-word;
 }
