@@ -362,11 +362,6 @@ hr{
   text-justify: inter-word;
 }
 
-.job_description {
-  text-align: justify;
-  text-justify: inter-word;
-}
-
 .task_summary{
   list-style-type: disc;
   padding-left: 1rem;
