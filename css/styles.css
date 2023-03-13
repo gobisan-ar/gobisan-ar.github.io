@@ -362,6 +362,10 @@ hr{
   text-justify: inter-word;
 }
 
+.task_summary{
+  list-style-type: disc;
+}
+
 /*========== LANGUAGES ==========*/
 .languages_content,
 .skills_tools {
