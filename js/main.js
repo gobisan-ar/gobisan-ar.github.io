@@ -134,6 +134,10 @@ function experience(join_date) {
     year_str = year_count > 1 ? "yrs" : "yr";
   } 
 
+  if (month_count == 0){
+    month_count = 1
+  } 
+
   month_str = month_count > 1 ? "mos" : "mo";
 
   return experience_str + (year_count > 1 ? year_count + " " + year_str + " " + month_count + " " + month_str : diff + " " + month_str) + ")";
