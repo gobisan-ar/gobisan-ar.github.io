@@ -357,6 +357,10 @@ hr{
   font-size: var(--smaller-font-size);
 }
 
+.experience_responsibility{
+  margin-top: .5rem;
+}
+
 .task_summary{
   list-style-type: disc;
   padding-left: 1rem;
