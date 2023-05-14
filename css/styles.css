@@ -355,10 +355,7 @@ hr{
 .education_year,
 .experience_year {
   font-size: var(--smaller-font-size);
-}
-
-.experience_responsibility{
-  margin-top: .5rem;
+  padding-bottom: .5rem;
 }
 
 .task_summary{
