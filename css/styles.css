@@ -329,7 +329,7 @@ hr{
 .experience_line {
   display: block;
   width: 2px;
-  height: 100%;
+  height: 101%;
   background-color: var(--text-color-light);
   transform: translate(7px, 0);
 }
