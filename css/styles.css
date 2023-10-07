@@ -606,11 +606,6 @@ hr{
     outline: none;
     border: 3px solid var(--theme-color);
   }
-
-  .education_line,
-  .experience_line {
-    margin-bottom: 2rem;
-  }
 }
 
 
