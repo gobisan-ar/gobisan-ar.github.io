@@ -330,7 +330,6 @@ hr{
   display: block;
   width: 2px;
   height: 100%;
-  margin-bottom: 1rem;
   background-color: var(--text-color-light);
   transform: translate(7px, 0);
 }
