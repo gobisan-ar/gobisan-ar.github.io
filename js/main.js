@@ -144,7 +144,7 @@ function experience(join_date) {
 }
 
 
-var company_join = new Date(2024, 7, 1);
+var company_join = new Date("2024-07-01");
 var current_experience = experience(company_join);
 const current_company = document.getElementById("current_company");
 
