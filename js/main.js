@@ -163,3 +163,4 @@ window.addEventListener('scroll', scrollTop)
 
 /*==================== SET CURRENT YEAR TO COPYRIGHT ====================*/
 document.getElementById('copyright-year').innerHTML = new Date().getFullYear()
+
