@@ -112,44 +112,47 @@ projectHeader.forEach((el) => {
 
 
 /*==================== EXPERIENCE ====================*/
-const monthNames = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
+function experience(joinDate, now = new Date()) {
+  if (!(joinDate instanceof Date) || isNaN(joinDate)) {
+    return "Invalid start date";
+  }
+  if (joinDate > now) {
+    const startLabel = joinDate.toLocaleString("en-US", { month: "short", year: "numeric" });
+    return `${startLabel} - Present (0 mo)`; // or: `Starts ${startLabel}`
+  }
 
-function experience(join_date) {
-  var current_date = new Date();
-  var diff = (current_date.getTime() - join_date.getTime()) / 1000;
+  // Work with date-only precision to avoid time-of-day skew
+  const start = new Date(joinDate.getFullYear(), joinDate.getMonth(), joinDate.getDate());
+  const end   = new Date(now.getFullYear(),     now.getMonth(),     now.getDate());
 
-  var year_str = "yr"
-  var month_str = "mo"
-  var join_month = monthNames[join_date.getMonth() - 1];
-  var experience_str = join_month + " " + join_date.getFullYear() + " - Present ("
+  // Compute years and months
+  let years  = end.getFullYear() - start.getFullYear();
+  let months = end.getMonth() - start.getMonth();
 
-  diff /= (60 * 60 * 24 * 7 * 4);
-  diff = Math.ceil(diff);
+  // If we haven't reached the start day in the current month, subtract one month
+  if (end.getDate() < start.getDate()) {
+    months -= 1;
+  }
+  if (months < 0) {
+    years  -= 1;
+    months += 12;
+  }
 
-  var year_count = 0;
-  var month_count = diff % 12;
+  const startLabel = start.toLocaleString("en-US", { month: "short", year: "numeric" });
 
-  if (diff >= 12){
-    year_count = Math.floor(diff / 12)
-    year_str = year_count > 1 ? "yrs" : "yr";
-  } 
+  // Build the duration string (LinkedIn-style: omit "0 mos" when we have whole years)
+  const parts = [];
+  if (years > 0) parts.push(`${years} ${years === 1 ? "yr" : "yrs"}`);
+  if (months > 0 || years === 0) parts.push(`${months} ${months === 1 ? "mo" : "mos"}`);
 
-  if (month_count == 0){
-    month_count = 1
-  } 
-
-  month_str = month_count > 1 ? "mos" : "mo";
-
-  return experience_str + (year_count > 1 ? year_count + " " + year_str + " " + month_count + " " + month_str : month_count + " " + month_str) + ")";
+  return `${startLabel} - Present (${parts.join(" ")})`;
 }
 
-
-var company_join = new Date(2024,07,01);
-var current_experience = experience(company_join);
+// Usage
+const company_join = new Date(2024, 7, 1); // Aug is 7 (0-based)
+const current_experience = experience(company_join);
 const current_company = document.getElementById("current_company");
-
-current_company.innerHTML = current_experience;
-
+if (current_company) current_company.textContent = current_experience;
 
 /*==================== SHOW SCROLL TOP ====================*/
 function scrollTop() {
@@ -163,4 +166,5 @@ window.addEventListener('scroll', scrollTop)
 
 /*==================== SET CURRENT YEAR TO COPYRIGHT ====================*/
 document.getElementById('copyright-year').innerHTML = new Date().getFullYear()
+
 
