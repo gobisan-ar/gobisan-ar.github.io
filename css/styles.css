@@ -473,9 +473,11 @@ hr{
   margin-top: 0;
 }
 
+/*
 .certificate_link{
   margin-top: .25rem;
 }
+*/
 
 .certificate_link:hover,
 .repo_link:hover,
@@ -704,5 +706,6 @@ hr{
     background-color: var(--theme-color);
   }
 }
+
 
 
