@@ -149,7 +149,7 @@ function experience(joinDate, now = new Date()) {
 }
 
 // Usage
-const company_join = new Date(2024, 7, 1); // Aug is 7 (0-based)
+const company_join = new Date(2024, 6, 1); // Aug is 7 (0-based)
 const current_experience = experience(company_join);
 const current_company = document.getElementById("current_company");
 if (current_company) current_company.textContent = current_experience;
@@ -166,5 +166,6 @@ window.addEventListener('scroll', scrollTop)
 
 /*==================== SET CURRENT YEAR TO COPYRIGHT ====================*/
 document.getElementById('copyright-year').innerHTML = new Date().getFullYear()
+
 
 
