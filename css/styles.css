@@ -474,7 +474,7 @@ hr{
 }
 
 .certificate_link{
-  margin-top: 1.25rem;
+  margin-top: 1rem;
 }
 
 .certificate_link:hover,
@@ -704,3 +704,4 @@ hr{
     background-color: var(--theme-color);
   }
 }
+
