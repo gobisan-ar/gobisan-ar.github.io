@@ -312,26 +312,68 @@ hr{
 .education_time,
 .experience_time {
   padding-right: 1rem;
+  position: relative;
+  min-width: 24px;
+  z-index: 11;
 }
 
 .education_rounder,
 .experience_rounder {
-  position: relative;
+  position: absolute;
+  left: 0;
+  top: 0.25rem;
   display: block;
   width: 16px;
   height: 16px;
   background-color: var(--theme-color);
   border-radius: 50%;
-  margin-top: 0.25rem;
+  z-index: 12;
 }
 
 .education_line,
 .experience_line {
-  display: block;
+  position: absolute;
+  left: 7px; /* kept for fallback */
+  top: 0.25rem;
+  bottom: 0;
   width: 2px;
-  height: 101%;
   background-color: var(--text-color-light);
-  transform: translate(7px, 0);
+  z-index: 1; /* behind the rounder */
+}
+
+/* Draw a single continuous vertical line behind rounders across the whole list */
+.education_container,
+.experience_container {
+  position: relative;
+  padding-bottom: 0.5rem; /* reduced to avoid large gaps between sections */
+  overflow: visible;
+}
+
+/* Per-item vertical line (drawn from each rounder to the bottom of its content).
+   Hiding the line on the last content prevents any stray line after the final rounder. */
+.education_time::after,
+.experience_time::after {
+  content: "";
+  position: absolute;
+  left: 7px; /* aligns with rounder */
+  top: 0.25rem;
+  bottom: -2rem; /* extended further so line meets the next rounder center */
+  width: 2px;
+  background-color: var(--text-color-light);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Hide the per-item line for the last timeline item so there's no line after the final rounder */
+.education_container .education_content:last-child .education_time::after,
+.experience_container .experience_content:last-child .experience_time::after {
+  display: none;
+}
+
+/* hide per-item lines (we use the container line instead) */
+.education_time .education_line,
+.experience_time .experience_line {
+  display: none;
 }
 
 .education_data,
